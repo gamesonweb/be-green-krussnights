@@ -12,6 +12,13 @@ Vous avez essayé de raisonner avec eux, mais sans succès... Si vous ne faites 
 * Recrutez au fur à mesure de votre aventure jusqu'à 45 héros différents eparpillés dans le monde pour faire face à des ennemis de plus en plus puissants !
 * Affrontez 90 types d'ennemis différents dans 97 niveaux qui testeront vos reflexes et votre sens stratégique !
 * Fôret, grotte, desert et plus ! Utilisez les différents environnements à votre avantage, ne négligez pas le champ de bataille et utilisez le terrain pour repousser les forces ennemis dans ce Tower Defense dynamique !
+
+## Démo
+Jouez au jeu [ici](https://saad-ahmed98.github.io/TODO/).
+
+## Showcase video
+Regardez une vidéo montrant le gameplay du jeu [ici](https://youtu.be/TODO).
+
 # Depôt du jeu
 Le code du jeu, en étant très volumineux, est stocké sur un repo apart que vous pourrez trouver au lien suivant :
 https://github.com/saad-ahmed98/Krussnights
