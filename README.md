@@ -19,7 +19,7 @@ Jouez au jeu [ici](https://saad-ahmed98.github.io/TODO/).
 ## Showcase video
 Regardez une vidéo montrant le gameplay du jeu [ici](https://youtu.be/TODO).
 
-# Depôt du jeu
+## Depôt du jeu
 Le code du jeu, en étant très volumineux, est stocké sur un repo apart que vous pourrez trouver au lien suivant :
 https://github.com/saad-ahmed98/Krussnights
 
