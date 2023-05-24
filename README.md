@@ -1,7 +1,7 @@
 # Greenights
 Jeu de stratégie Tower Defense "Greenights" developpé pour le concours Games on web 2023.
 
-# Synopsis
+## Synopsis
 
 Vous êtes le résident d'une petite ville située au milieu de la fôret de Gaul. Vous vivez une vie calme en harmonie avec la nature qui l'entoure. 
   
@@ -23,6 +23,6 @@ Regardez une vidéo montrant le gameplay du jeu [ici](https://youtu.be/TODO).
 Le code du jeu, en étant très volumineux, est stocké sur un repo apart que vous pourrez trouver au lien suivant :
 https://github.com/saad-ahmed98/Krussnights
 
-# Membres de l'équipe
+## Membres de l'équipe
 
 * Saad el din Ahmed
