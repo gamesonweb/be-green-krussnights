@@ -32,6 +32,8 @@ Documentation du jeu Greenights.
     - [Menu de jeu](#menu-de-jeu)
     - [Sauvegarde des progrès de jeu](#sauvegarde-des-progrès-de-jeu)
     - [Optimisation](#optimisation)
+- [Sources utilisées](#sources-utilisées)
+- [Tutoriels et codes de reference](#tutoriels-et-codes-de-reference)
 - [Auteur](#auteur)
 
 ## Synopsis
@@ -166,6 +168,23 @@ Le jeu sauvegarde les progrès du joueur dans le localStorage car le jeu est tr�
 #### Optimisation
 Pour optimiser le jeu, j'ai du changer la taille de mes spritesheets plusieurs fois car elles avaient des tailles abérrantes. J'ai diminué leur taille le plus possible, je les ai compressées et ensuite je les ai converties en webp qui est un format très leger permettant la transparence.
 
+## Sources utilisées
+- SFX et voix : [aceship](https://aceship.github.io/AN-EN-Tags/index.html)
+- Backgrounds : [aceship](https://aceship.github.io/AN-EN-Tags/akgallery.html)
+- Sprites enregistrées sous forme de GIFs à partir de : [arknights SD](https://flashmercurymcfly.github.io/Arknights-SD-Viewer/)
+- GIFs converties en spritesheets avec : [gif2sprite](https://jacklehamster.github.io/utils/gif2sprite/)
+- Bibliothèque pour le pathfinding : [PathFinding.js](https://github.com/qiao/PathFinding.js/)
+- icones GUI : [game-icons](https://game-icons.net/)
+
+## Tutoriels et codes de reference
+- Drag & drop (pour placer les unités) : [babylonjs drag demo](https://www.babylonjs-playground.com/#7CBW04)
+- Code écran de chargement : [SomeBabylonGame](https://github.com/saad-ahmed98/SomeBabylonGame)
+- Dessiner ligne progressivement (pour montrer la route des ennemis quand ils apparaissent) : [babylonjs playground](https://playground.babylonjs.com/#5Q3FLL)
+- Changer le rgb d'un sprite (pour montrer quand un sprite s'est fait toucher) : [Can I set sprite transparency](https://forum.babylonjs.com/t/can-i-set-sprite-transparency/30748)
+- Preload GUI image (pour charger les images GUI avant le début d'une bataille) : [How to preload a GUI image?](https://forum.babylonjs.com/t/how-to-preload-a-gui-image/9858)
+- Charger une sprite et l'utiliser dans le jeu : [SpriteManager](https://doc.babylonjs.com/features/featuresDeepDive/sprites/sprite_manager)
+- Optimisation d'une scene : [optimize your scene](https://doc.babylonjs.com/features/featuresDeepDive/scene/optimize_your_scene)
+- Jouer du son : [Audio](https://doc.babylonjs.com/features/featuresDeepDive/audio/playingSoundsMusic)
 
 ## Auteur
 Saad el din Ahmed (Kruss)
