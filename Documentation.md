@@ -2,6 +2,38 @@
 
 Documentation du jeu Greenights.
 
+## Table des matières
+- [Synopsis](#synopsis)
+- [Contrôles](#contrôles)
+- [Comment jouer](#comment-jouer)
+- [Making of Greenights](#making-of-greenights)
+  - [De l'idée au jeu](#de-lidée-au-jeu)
+  - [Création du prototype](#création-du-prototype)
+    - [Création mappe](#création-mappe)
+    - [Caméra de jeu](#caméra-de-jeu)
+    - [Ennemis et pathfinding](#ennemis-et-pathfinding)
+    - [Unités du joueur](#unités-du-joueur)
+    - [Interactions entre ennemis et joueur](#interactions-entre-ennemis-et-joueur)
+    - [Création de la GUI de jeu](#création-de-la-gui-de-jeu)
+    - [Sprites et animations](#sprites-et-animations)
+    - [Son du jeu](#son-du-jeu)
+      - [Effets sonores (SFX)](#effets-sonores-sfx)
+      - [Musique](#musique)
+      - [Voix des personnages](#voix-des-personnages)
+    - [Chargement des assets](#chargement-des-assets)
+    - [Mecaniques codées](#mecaniques-codées)
+    - [Menu contextuel unité](#menu-contextuel-unité)
+    - [Retours sur le prototype](#retours-sur-le-prototype)
+  - [Evolutions suite au prototype](#evolutions-suite-au-prototype)
+    - [Plus d'info sur le menu contextuel](#plus-dinfo-sur-le-menu-contextuel)
+    - [Priorité attaques](#priorité-attaques)
+    - [Textures](#textures)
+    - [Detection des impactes](#detection-des-impactes)
+    - [Menu de jeu](#menu-de-jeu)
+    - [Sauvegarde des progrès de jeu](#sauvegarde-des-progrès-de-jeu)
+    - [Optimisation](#optimisation)
+- [Auteur](#auteur)
+
 ## Synopsis
 
 Vous êtes le résident d'une petite ville située au milieu de la fôret de Gaul. Vous vivez une vie calme en harmonie avec la nature qui l'entoure. 
