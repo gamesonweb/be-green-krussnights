@@ -215,7 +215,7 @@ Il faut noter que c'est des liens vers des repo, si vous souhaitez essayer les d
 - Charger une sprite et l'utiliser dans le jeu : [SpriteManager](https://doc.babylonjs.com/features/featuresDeepDive/sprites/sprite_manager)
 - Optimisation d'une scene : [optimize your scene](https://doc.babylonjs.com/features/featuresDeepDive/scene/optimize_your_scene)
 - Jouer du son : [Audio](https://doc.babylonjs.com/features/featuresDeepDive/audio/playingSoundsMusic)
-
+- Fade in sur la mappe quand le niveau commence : [Simplistic fade to black](https://playground.babylonjs.com/#QUM4H3)
 ## Auteur
 Saad El Din Ahmed
 
