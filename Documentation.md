@@ -50,7 +50,11 @@ Vous avez essayé de raisonner avec eux, mais sans succès... Si vous ne faites 
 
 ## Contrôles
 Le jeu se joue exclusivement à la souris.  
-Il est possible de mettre le jeu en pause avec le bouton "Echappe"
+Il est possible de mettre le jeu en pause avec le bouton "Echappe".
+
+## Performance
+Veuillez "zoomer" la page de jeu lorsque vous remarquez une perte de FPS, cela diminuera la qualité d'image du jeu mais augmentera la performance.  
+Si vous ne voyez pas le texte de jeu (ex : écran trop petit) vous pouvez choisir de "dezoomer" le jeu, ceci ameliore la qualité d'image au risque de diminuer la performance.
 
 ## Comment jouer
 

@@ -8,14 +8,16 @@ Jouer au jeu: [Démo](https://saad-ahmed98.github.io/Greenights/).
 Documentation du jeu ainsi que son "making of": [documentation](Documentation.md).
 
 ## Fichiers de sauvegarde
-Utilisez l'option "Load" sur l'écran d'accueil pour charger vos fichiers de sauvegarde, en voici quelques un pour aider à tester :
-- Jeu completé à 0% :
-- Jeu completé à 100% :
-- Ch1 completé :
-- Ch1-Ch2 completés :
-- Ch1-Ch2-Ch3 (avec Hell) completés :
-- Tout completé sauf Ch5 (sans Hell) :
-- Tout completé sauf Ch5 (avec Hell) :
+Utilisez l'option "Load" sur l'écran d'accueil DU JEU pour charger vos fichiers de sauvegarde, en voici quelques uns pour aider à tester :
+- Jeu completé à 0%: [save_0](save_files/save_0.json)
+- Ch1 completé: [save_1](save_files/save_1.json)
+- Ch1-Ch2 completés: [save_2](save_files/save_2.json)
+- Ch1-Ch2-Ch3 (avec Hell) completés: [save_3](save_files/save_3.json)
+- Tout completé sauf Ch5 (sans Hell): [save_4](save_files/save_4.json)
+- Tout completé sauf Ch5 (avec Hell): [save_5](save_files/save_5.json)
+- Tout completé sauf Ch5 Hell: [save_6](save_files/save_6.json)
+- Jeu completé à 100%: [save_100](save_files/save_100.json)
+
 ## Showcase video
 Vidéo montrant l'integralité du jeu sans commentaire: [Greenights - Full playthrough no commentary](https://www.youtube.com/watch?v=xkwkyCic-Fs).
 
