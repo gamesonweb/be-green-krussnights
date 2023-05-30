@@ -2,13 +2,13 @@
 Jeu de stratégie Tower Defense "Greenights" developpé pour le concours Games on web 2023.
 
 ## Démo
-Jouer au jeu: [Démo](https://saad-ahmed98.github.io/Greenights/).
+Jouer au jeu: [démo](https://saad-ahmed98.github.io/Greenights/).
 
 ## Documentation
 Documentation du jeu ainsi que son "making of": [documentation](Documentation.md).
 
 ## Fichiers de sauvegarde
-Utilisez l'option "Load" sur l'écran d'accueil DU JEU pour charger vos fichiers de sauvegarde, en voici quelques uns pour aider à tester :
+Utilisez l'option "Load" sur l'écran d'accueil du jeu pour charger vos fichiers de sauvegarde, en voici quelques uns pour aider à tester :
 - Jeu completé à 0%: [save_0](save_files/save_0.json)
 - Ch1 completé: [save_1](save_files/save_1.json)
 - Ch1-Ch2 completés: [save_2](save_files/save_2.json)
