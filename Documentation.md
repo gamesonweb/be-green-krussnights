@@ -3,8 +3,10 @@
 Documentation du jeu Greenights.
 
 ## Table des matières
+- [Remerciements](#remerciements)
 - [Synopsis](#synopsis)
 - [Contrôles](#contrôles)
+- [Performance](#performance)
 - [Comment jouer](#comment-jouer)
 - [Making of Greenights](#making-of-greenights)
   - [De l'idée au jeu](#de-lidée-au-jeu)
@@ -32,9 +34,24 @@ Documentation du jeu Greenights.
     - [Menu de jeu](#menu-de-jeu)
     - [Sauvegarde des progrès de jeu](#sauvegarde-des-progrès-de-jeu)
     - [Optimisation](#optimisation)
+  - [Liens vers les différentes versions du jeu](#liens-vers-les-différentes-versions-du-jeu)
 - [Sources utilisées](#sources-utilisées)
 - [Tutoriels et codes de reference](#tutoriels-et-codes-de-reference)
 - [Auteur](#auteur)
+  - [Moi et le concours](#moi-et-le-concours)
+
+
+## Remerciements
+
+Je tiens à commencer par des remerciements parce que même si j'ai absolument adoré developper ce jeu sur lequel j'ai passé un nombre incalculable de journées, j'en serais possibilement pas arrivé à là si ce n'était pas grâce aux personnes suivantes :
+  
+- Les sponsors CGI pour avoir mis en place ce concours sans lequels je n'aurais peut-être jamais découvert BabylonJS et dévéloppé le jeu.
+- Les developpeurs BabylonJS pour avoir crée ce framework, je n'aurais jamais cru que je pouvais créer un jeu aussi complexe dans mon langage de programmation préféré, le javascript.
+- M.Buffa pour nous avoir bien fait de la pub sur ce concours me permettant de le découvrir, mais aussi pour ses mots d'encouragement et retours constructifs qui m'ont permis d'avancer dans la bonne voie.
+- Mes amis sur discord pour m'avoir motivé à commencer le dévéloppement du jeu et qui m'ont suivi tout le long du parcours.
+- Mes collegues à l'université et amis proches qui ont testé et m'ont donné des retours m'aidant à leur façon.
+
+Sans toutes ces personnes, j'en serais pas là, je vous remercie.
 
 ## Synopsis
 
@@ -77,7 +94,7 @@ Avec le support de mes amis qui étaient curieux de voir un Arknights "du pauvre
 ### Création du prototype
 #### Création mappe
 J'ai commencé par créer une grille correspondant à un niveau. Cette grille est definie (dans le code) par une matrice et chaque élément du tableau sera une boite dessinée sur la scène, il y a 4 types de boites :
-- boites surelevées qui correspond aux zones où on peut placer les unités rangé.
+- boites surelevées qui correspond aux zones où on peut placer les unités rangés.
 - boites au sol qui correspond aux zones où on peut placer les unités au sol et où les ennemis peuvent bouger.
 - boites au sol noires correspondant au sol où on peut rien placer mais les ennemis peuvent se déplacer.
 - boites surelevées noires correspondant au décor où on peut rien placer.  
@@ -106,9 +123,9 @@ Avec les bases de jeu crée, j'ai crée quelques éléments de GUI pour permettr
 - J'ai mis en place des boutons qui permettent de mettre le jeu en pause et d'augmenter/diminuer la vitesse de jeu (donc les ennemis et les personnages attaqueront et bougeront à des intervalles correspondants à la vitesse selectionnée)
 
 #### Sprites et animations
-Pour une prémière version j'aurai pu me contenter de jouer avec des cubes, mais je ne voulais pas quelque chose de si moche. Arknights utilise des personnages 2D, donc j'ai cherché comment utiliser des sprites sur Babylon. Heureusement, il est très simple avec un [SpriteManager](https://doc.babylonjs.com/features/featuresDeepDive/sprites/sprite_manager) d'afficher des sprites sur une scene et les animer (en choisissant de quel sprite jusqu'à quel sprite l'animation s'execute). Il ne me restait donc que de trouver les sprites. Arknights possède une bibliothéque en ligne qui affiche tous les personnages et les animations associées sous fond vert, j'ai donc suivi un processus specifique pour les convertir en spritesheets utilisables :
-1. J'ai enregistré les animations en GIF à 15 FPS (j'ai decidé d'utiliser 15 FPS parce que plus allait créer des spritesheet immenses qui étaient simplement impossibles à gérer niveau performance)
-2. J'ai ensuite, supprimé les fonds verts des GIF.
+Pour une prémière version j'aurai pu me contenter de jouer avec des cubes, mais je ne voulais pas quelque chose de si moche. Arknights utilise des personnages 2D, donc j'ai cherché comment utiliser des sprites sur Babylon. Heureusement, il est très simple avec un [SpriteManager](https://doc.babylonjs.com/features/featuresDeepDive/sprites/sprite_manager) d'afficher des sprites sur une scene et les animer (en choisissant de quel sprite jusqu'à quel sprite l'animation s'execute). Il ne me restait donc que de trouver les sprites. Arknights possède une bibliothéque en ligne qui affiche tous les personnages et les animations associées sous fond vert. Après plusieurs recherches sur outils en lignes pouvant m'aider dans ma tâche et essais, j'ai mis en place un processus specifique pour convertir en spritesheets utilisables les personnages 2D:
+1. J'ai enregistré les animations en GIF à 15 FPS (j'ai decidé d'utiliser 15 FPS parce que plus de FPS allait créer des spritesheet immenses qui étaient simplement impossibles à gérer niveau performance).
+2. J'ai ensuite supprimé les fonds verts des GIF.
 3. Enfin, j'ai converti les GIF en spritesheet tout en notant quelque part où chaque animation commençait et se terminait (exemple : animation d'attaque pour personnage x commence au sprite 0 et termine au sprite 15, puis celle de mort commence au sprite 16 etc.)
 
 J'ai suivi ce processus pour tous les sprites que vous pourrez voir dans le jeu et le processus n'a pas changé depuis le prototype jusqu'à la dernière version.  
@@ -121,12 +138,13 @@ Pour une expérience de jeu optimale, j'ai aussi fait attention à mettre des ef
 ##### Effets sonores (SFX)
 J'ai decidé de lancer des sfx pour plusieurs actions (ennemi ou allié) : quand une attaque est lancée, quand l'attaque connecte avec l'ennemi, quand un skill est activé. Ensuite, je joue des sfx assez forts quand un allié est mort et quand un ennemi atteint une boite bleue pour faire réagir le joueur qui n'était peut-être pas attentif sur la zone du champ de bataille impactée.
 ##### Musique
-Pour la musique, je ne voulais absolument pas une musique qui termine et se relance depuis le début, j'ai donc fait l'effort de créer une musique qui fait un loop qu'on ne remarque pas. Pour faire cela, je joue donc d'abord un bout de musique au début, et ensuite un autre bout de musique qui se loop permettant une musique infinie.
+Pour la musique, je ne voulais absolument pas une musique qui termine et se relance depuis le début, j'ai donc fait l'effort de créer une musique qui fait un loop qu'on ne remarque pas donnant l'impression d'une musique infinie. Pour faire cela, je joue donc d'abord un bout de musique au début, et ensuite un autre bout de musique qui boucle sans qu'on remarque permettant une musique infinie.
 ##### Voix des personnages
-Chaque personnage parlera pour certaines actions : quand il active un skill, quand la bataille commence (celui qui dira quelque chose pour ce cas, sera choisi aléatoirement), quand son propre menu contextuel est selectionné, quand il est placé sur la mappe.
+Chaque personnage parlera pour certaines actions : quand il active un skill, quand la bataille commence (celui qui dira quelque chose pour ce cas, sera choisi aléatoirement), quand son propre menu contextuel est selectionné, quand il est placé sur la mappe.  
+Les voix des personnages (en japonais, parce qu'on est très manga/anime par ici!) donnent beaucoup de caractères aux unités que l'on joue.
 
 #### Chargement des assets
-J'ai utilisé l'asset manager pour charger tous les asset de jeu, j'ai été obligé de faire cela car sinon le jeu allait freeze pendant un moment quand la mappe commence pour charger les sprites.  
+J'ai utilisé l'asset manager pour charger tous les asset de jeu, j'ai été obligé de faire cela car sinon le jeu allait freeze pendant un moment quand la mappe commence pour charger les asset les plus lourds comme les sprites.  
 J'ai du être créatif pour pouvoir charger mes sprite manager avec l'asset manager car il n'y avait aucune doc sur le sujet sur les forum Babylon.  
 Je suis donc allé voir le code source de SpriteManager et j'en ai donc deduit que je pouvais charger les spritesheet en tant que textures et ensuite les affecter manuellement aux sprite managers par la suite.
 
@@ -172,13 +190,21 @@ Le jeu sauvegarde les progrès du joueur dans le localStorage car le jeu est tr�
 #### Optimisation
 Pour optimiser le jeu, j'ai du changer la taille de mes spritesheets plusieurs fois car elles avaient des tailles abérrantes. J'ai diminué leur taille le plus possible, je les ai compressées et ensuite je les ai converties en webp qui est un format très leger permettant la transparence.
 
+### Liens vers les différentes versions du jeu
+Il faut noter que c'est des liens vers des repo, si vous souhaitez essayer les différentes version, il faudra télécharger le code et lancer index.html :
+- 1 seul niveau, pas d'écran d'accueil : [prototype](https://github.com/KrussX/Krussnights/tree/76f2d1370435bbef9be98f46b89feeb42d5c0b39).
+- plusieurs niveaux, écran d'accueil minimaliste : [alpha](https://github.com/KrussX/Krussnights/tree/c9cbc812858858ef8f0c79b7880b5471227d31e8)
+- amélioration graphismes, textures, gui et plus de profondeur dans le gameplay : [beta](https://github.com/KrussX/Krussnights/tree/a752b7d0925593d45abcdc547d38b17b62eb299d).
+- version du jeu classique : [Krussnights](https://github.com/KrussX/Krussnights).
+- version pour le concours : [Greenights](https://github.com/saad-ahmed98/Greenights).
+
 ## Sources utilisées
-- SFX et voix : [aceship](https://aceship.github.io/AN-EN-Tags/index.html)
-- Backgrounds : [aceship](https://aceship.github.io/AN-EN-Tags/akgallery.html)
-- Sprites enregistrées sous forme de GIFs à partir de : [arknights SD](https://flashmercurymcfly.github.io/Arknights-SD-Viewer/)
-- GIFs converties en spritesheets avec : [gif2sprite](https://jacklehamster.github.io/utils/gif2sprite/)
-- Bibliothèque pour le pathfinding : [PathFinding.js](https://github.com/qiao/PathFinding.js/)
-- icones GUI : [game-icons](https://game-icons.net/)
+- SFX et voix : [aceship](https://aceship.github.io/AN-EN-Tags/index.html).
+- Backgrounds : [aceship](https://aceship.github.io/AN-EN-Tags/akgallery.html).
+- Sprites enregistrées sous forme de GIFs à partir de : [arknights SD](https://flashmercurymcfly.github.io/Arknights-SD-Viewer/).
+- GIFs converties en spritesheets avec : [gif2sprite](https://jacklehamster.github.io/utils/gif2sprite/).
+- Bibliothèque pour le pathfinding : [PathFinding.js](https://github.com/qiao/PathFinding.js/).
+- icones GUI : [game-icons](https://game-icons.net/).
 
 ## Tutoriels et codes de reference
 - Drag & drop (pour placer les unités) : [babylonjs drag demo](https://www.babylonjs-playground.com/#7CBW04)
@@ -191,4 +217,21 @@ Pour optimiser le jeu, j'ai du changer la taille de mes spritesheets plusieurs f
 - Jouer du son : [Audio](https://doc.babylonjs.com/features/featuresDeepDive/audio/playingSoundsMusic)
 
 ## Auteur
-Saad el din Ahmed (Kruss)
+Saad El Din Ahmed
+
+### Moi et le concours
+Actuellement, alternant en M2 MIAGE à l'université de Nice Côté d'Azur, je suis un étudiant très discret qui passe parfois inaperçu au sein de sa promo, mais qui ne manque pas de motivation quand il faut travailler.  
+  
+J'ai toujours été un avide gamer, j'ai eu ma première console (Nintendo SNES) à 6 ans et depuis, je n'ai jamais arrêté de jouer et à me divertir avec les jeux-vidéos.  
+Comme tout gamer, il y a eu un ou plusieurs moments où on a imaginé des scénarios ou des mécaniques de fou pour un hypothétique jeu sans pourtant avoir les capacités pour créer ce jeu, et rejoindre une formation informatique a renforcé l'idée, car quand on se documente un minimum sur le processus de création d'un jeu, on remarque que c'est très difficile et compliqué du côté technique, mais aussi côté design.  
+  
+Un jour par contre tout a changé, en M1 MIAGE, j'ai eu l'opportunité d'avoir des cours optionnels en développement 3D. Ces cours, enseignés par M.Buffa, nous ont appris les principes du développement 3D tout en utilisant un langage qui était familier à tout informaticien : le javascript.  
+Cette année-là, avec Yessine Ben El Bey et Wajdi Gaiech, nous avons utilisé ce que l'on a appris avec les cours de 3D et présenté notre jeu SomeBabylonGame au concours.  
+C'était une expérience très enrichissante, et même si nous n'avions aucune confiance en notre jeu (je me rappelle que pendant la remise de prix, on était soulagés quand la dernière team a été annoncée parce qu'on pensait vraiment qu'on pouvait potentiellement être les derniers!) nous avons été surpris en découvrant que nous avions atteint le podium en gagnant le prix "Coup de coeur CGI".  
+Cela m'a montré que je sous-estimais mon potentiel, mais aussi m'a donné la motivation d'essayer de faire plus, peut-être créer l'un des jeux que je me disais incapable de faire à l'époque...  
+  
+J'ai donc passé du temps après le concours à jouer un peu avec l'engine BabylonJS et je me suis enfin décidé à créer un jeu complet.  
+En M2, notre planning est très chargé, de plus, nous avons aussi des alternances qui occupent la majorité de notre temps. Je n'ai donc pas réussi à former une équipe cette fois-ci, et même pour moi, il allait peut-être se révéler compliqué de consacrer mon temps libre au jeu surtout si j'allais tout faire solo. Je me suis donc pris tôt et j'ai commencé à développer aussi tôt que septembre. J'avais commencé pour le fun, mais plus je travaillais sur le jeu, plus de choses je voulais ajouter pour rendre l'expérience utilisateur meilleure et je me suis retrouvé à consacrer tout mon temps libre à coder.  
+  
+Finalement, je suis très heureux de ce que j'ai fait et j'ai eu des retours plutôt positifs. J'espère que vous allez aussi aimer mon jeu et vous divertir !
+
