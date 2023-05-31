@@ -51,8 +51,6 @@ Je tiens à commencer par des remerciements parce que même si j'ai absolument a
 - Mes amis sur discord pour m'avoir motivé à commencer le dévéloppement du jeu et qui m'ont suivi tout le long du parcours.
 - Mes collegues à l'université et amis proches qui ont testé et m'ont donné des retours m'aidant à leur façon.
 
-Sans toutes ces personnes, j'en serais pas là, je vous remercie.
-
 ## Synopsis
 
 Vous êtes le résident d'une petite ville située au milieu de la fôret de Gaul. Vous vivez une vie calme en harmonie avec la nature qui l'entoure. 
@@ -71,7 +69,8 @@ Il est possible de mettre le jeu en pause avec le bouton "Echappe".
 
 ## Performance
 Veuillez "zoomer" la page de jeu lorsque vous remarquez une perte de FPS, cela diminuera la qualité d'image du jeu mais augmentera la performance.  
-Si vous ne voyez pas le texte de jeu (ex : écran trop petit) vous pouvez choisir de "dezoomer" le jeu, ceci ameliore la qualité d'image au risque de diminuer la performance.
+Si vous ne voyez pas le texte de jeu (ex : écran trop petit) vous pouvez choisir de "dezoomer" le jeu, ceci ameliore la qualité d'image au risque de diminuer la performance.  
+**CE TRICK NE MARCHE PAS CORRECTEMENT SUR MOZILLA!!**
 
 ## Comment jouer
 
