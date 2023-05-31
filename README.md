@@ -19,6 +19,7 @@ Utilisez l'option "Load" sur l'écran d'accueil du jeu pour charger vos fichiers
 - Jeu completé à 100%: [save_100](save_files/save_100.json)
 
 ## Showcase video
+Vidéo showcase du jeu avec commentaire français : [Greenights - Showcase](https://TODO)  
 Vidéo montrant l'integralité du jeu sans commentaire: [Greenights - Full playthrough no commentary](https://www.youtube.com/watch?v=xkwkyCic-Fs).
 
 ## Depôt du jeu
